@@ -55,7 +55,7 @@ resource "aws_emr_cluster" "emr-spark-cluster" {
 
   step = [
     {
-      name              = "Copy script file from s3."
+      name = "Copy script file from s3."
       action_on_failure = "CONTINUE"
 
       hadoop_jar_step = {
@@ -64,7 +64,7 @@ resource "aws_emr_cluster" "emr-spark-cluster" {
       }
     },
     {
-      name              = "Setup pyspark with conda."
+      name = "Setup pyspark with conda."
       action_on_failure = "CONTINUE"
 
       hadoop_jar_step = {
